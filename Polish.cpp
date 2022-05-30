@@ -1,5 +1,6 @@
 #include "Polish.h"
 #include <string> 
+#include <cstdlib>
 
 
 char Polish::stackOpp(std::vector <char> *opperators){
@@ -27,9 +28,83 @@ bool Polish::check(std::vector<char> opperators, std::vector<int> integers){
 
 
 
-std::string Polish::returnAlg(std::vector<char> opperators, std::vector<int> integers){
+std::string Polish::returnAlg(std::string entry){
 
-    if ( check(opperators,integers) == true){
+
+    int entryLength = entry.length();
+
+    
+
+
+    int spaces = 1;
+    int j = 0;
+
+    int numOps = 0;
+    int numNums = 0;
+
+    for (int i=0; i<entryLength; i++){
+
+        if (entry[i] == ' '){
+
+            spaces++;
+    
+        }
+
+        else if (isdigit(entry[i]) == false){
+
+           numOps++;
+
+        }
+
+        else{
+
+            numNums++;
+
+        }
+    }
+
+       
+        
+
+        std::vector<char> opperators(numOps);
+        std::vector<int> integers(numNums);
+
+        
+
+    if (entryLength > 3){
+
+        
+
+        for (int i=0; i<entryLength; i++){
+
+
+            if (entry[i] == ' '){
+
+                j++;
+                continue;
+            }
+
+            else if (isdigit(entry[i]) == false){
+
+                opperators[j] = entry[i];
+
+            }
+
+            else{
+
+               integers[j-(opperators.size())] = integers[j-(opperators.size())] * 10 + (abs(entry[i]) - 48);
+
+            }
+
+
+        }
+
+        
+
+    }
+
+
+    if (check(opperators,integers) == true){
 
         value = integers.at(0);
 
