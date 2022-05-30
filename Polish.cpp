@@ -58,7 +58,9 @@ std::string Polish::returnAlg(std::string entry){
 
         else{
 
-            numNums++;
+            if (entry[i-1] == ' '){
+                numNums++;
+            }
 
         }
     }
@@ -100,6 +102,12 @@ std::string Polish::returnAlg(std::string entry){
         }
 
         
+
+    }
+
+    for (int i=0; i<integers.size(); i++){
+
+        std::cout << integers[i] << std::endl;
 
     }
 
