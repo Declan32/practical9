@@ -93,20 +93,17 @@ int main(){
 
 
 
+    Polish a;
 
+    std::vector<char> b;
+    b.push_back('*');
+    b.push_back('-');
 
-   
+    std::vector<int> c;
+    c.push_back(5);
+    c.push_back(6);
+    c.push_back(7);
 
-        std::cout << "(5 - 6) * 7 = -7" << std::endl;
-
-
-
-
-
-
-
-    // Polish a;
-
-    // std::cout << a.returnAlg(ops,nums);
+    std::cout << a.returnAlg(b,c);
 
 }
