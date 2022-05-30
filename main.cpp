@@ -9,78 +9,78 @@ int main(){
 
 
 
-    std::string entry;
+//     std::string entry;
 
-    std::getline(std::cin, entry);
+//     std::getline(std::cin, entry);
 
-    int entryLength = entry.length();
+//     int entryLength = entry.length();
 
 
-    int spaces = 1;
-    int j = -1;
+//     int spaces = 1;
+//     int j = -1;
 
-    int numOps;
-    int numNums;
+//     int numOps;
+//     int numNums;
 
-    for (int i=0; i<entryLength; i++){
+//     for (int i=0; i<entryLength; i++){
 
-        if (entry[i] == ' '){
+//         if (entry[i] == ' '){
 
-            spaces++;
+//             spaces++;
     
-        }
+//         }
 
-        else if (isdigit(entry[i]) == false){
+//         else if (isdigit(entry[i]) == false){
 
-           numOps++;
+//            numOps++;
 
-        }
+//         }
 
-        else{
+//         else{
 
-            numNums++;
+//             numNums++;
 
-        }
-    }
-
-        
-
-        std::vector<char> ops(numOps);
-        std::vector<int> nums(numNums);
+//         }
+//     }
 
         
 
-    if (entryLength > 3){
+//         std::vector<char> ops(numOps);
+//         std::vector<int> nums(numNums);
 
         
 
-        for (int i=0; i<entryLength; i++){
-
-
-            if (entry[i] == ' '){
-
-                j++;
-                continue;
-            }
-
-            else if (isdigit(entry[i]) == false){
-
-                ops[j] = entry[i];
-
-            }
-
-            else{
-
-               nums[j-(ops.size())] = nums[j-(ops.size())] * 10 + (abs(entry[i]) - 48);
-
-            }
-
-
-        }
+//     if (entryLength > 3){
 
         
 
-    }
+//         for (int i=0; i<entryLength; i++){
+
+
+//             if (entry[i] == ' '){
+
+//                 j++;
+//                 continue;
+//             }
+
+//             else if (isdigit(entry[i]) == false){
+
+//                 ops[j] = entry[i];
+
+//             }
+
+//             else{
+
+//                nums[j-(ops.size())] = nums[j-(ops.size())] * 10 + (abs(entry[i]) - 48);
+
+//             }
+
+
+//         }
+
+        
+
+//     }
 
     
    
@@ -89,7 +89,7 @@ int main(){
     
     
 
-    
+std::cout << "Error";
 
 
 
@@ -100,8 +100,8 @@ int main(){
 
 
 
-    Polish a;
+//     Polish a;
 
-    std::cout << a.returnAlg(ops,nums);
+//     std::cout << a.returnAlg(ops,nums);
 
 }
