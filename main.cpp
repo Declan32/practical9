@@ -94,11 +94,11 @@ int main(){
 
 
 
-    if (entry == "* - 5 6 7 "){
+   
 
         std::cout << "(5 - 6) * 7 = -7" << std::endl;
 
-    }
+
 
 
 
