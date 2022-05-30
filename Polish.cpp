@@ -45,7 +45,12 @@ std::string Polish::returnAlg(std::string entry){
 
     if (entry.size() == 1 && isdigit(entry[0]) == true){
 
+        
+
         output = entry[0];
+        output = output + " = ";
+        output = output + entry[0];
+
         return output;
 
     }
@@ -54,6 +59,10 @@ std::string Polish::returnAlg(std::string entry){
 
         output = entry[0];
         output = output + entry[1];
+        output = output + " = ";
+        output = output + entry[0];
+        output = output + entry[1];
+
         return output;
 
     }
