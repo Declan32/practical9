@@ -16,13 +16,23 @@ char Polish::stackOpp(std::vector <char> *opperators){
 
 bool Polish::check(std::vector<char> opperators, std::vector<int> integers){
 
-    if (opperators.size() == integers.size() - 1){
+    if (opperators.size() != integers.size() - 1){
 
-        return true;
+        return false;
 
     }
 
-    return false;
+    for (int i=0; i<integers.size(); i++){
+
+        if (integers[i] < 0 || integers[i] > 99){
+
+            return false;
+
+        }
+
+    }
+
+    return true;
 
 }
 
@@ -33,6 +43,20 @@ std::string Polish::returnAlg(std::string entry){
 
     int entryLength = entry.length();
 
+    if (entry.size() == 1 && isdigit(entry[0]) == true){
+
+        output = entry[0];
+        return output;
+
+    }
+
+    else if (entry.size() == 2 && isdigit(entry[0]) == true && isdigit(entry[1]) == true){
+
+        output = entry[0];
+        output = output + entry[1];
+        return output;
+
+    }
     
 
 
@@ -105,11 +129,19 @@ std::string Polish::returnAlg(std::string entry){
 
     }
 
-    for (int i=0; i<integers.size(); i++){
+   
 
-        std::cout << integers[i] << std::endl;
+    // if (opperators[0] == 0 && entryLength < 3){
 
-    }
+    //     output = integers[0];
+
+    //     return output;
+
+    // }
+
+   
+
+    
 
 
     if (check(opperators,integers) == true){
