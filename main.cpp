@@ -17,7 +17,7 @@ int main(){
 
 
     int spaces = 1;
-    int j = 0;
+    int j = -1;
 
     int numOps;
     int numNums;
@@ -102,6 +102,6 @@ int main(){
 
     Polish a;
 
-    std::cout << a.returnAlg(ops,nums) << std::endl;
+    std::cout << a.returnAlg(ops,nums);
 
 }
